@@ -16,8 +16,6 @@ data/
   raw_source/
   intermediate/01_notebook_step1_cleaning_results/
   processed/
-FILE_MANIFEST.csv
-LICENSE
 ```
 
 ## Raw Source Data
