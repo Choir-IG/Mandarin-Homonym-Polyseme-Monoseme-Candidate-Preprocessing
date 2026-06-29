@@ -1,6 +1,7 @@
 # MHPM-Mandarin-Chinese-Homonym-Polyseme-Monoseme-Database
 
 The MHPM database is an open Mandarin Chinese lexical ambiguity resource covering homonym, polyseme, and monoseme candidate words extracted and validated from Xiandai Hanyu Cidian, 7th edition.
+
 MPHP 数据库是一个开放型的汉语普通话词汇歧义数据集，涵盖了从《现代汉语词典》（第7版）中提取并经严格筛选和检验后的汉语普通话同音词、多义词及单义词三大类词语。
 
 Lexical ambiguity in Mandarin Chinese has long been an important topic in linguistics, psycholinguistics, and cognitive neuroscience research. A single written sinogram can be associated with multiple meanings, and different forms of lexical ambiguity raise important questions about how native speakers access, select, and represent word meaning in context. In this preprocessing pipeline, the distinction was operationalized using the entry and sense structure of **Xiandai Hanyu Cidian, 7th edition** 《现代汉语词典 第7版》: homonyms refer to words that share the same written form but have distinct, generally unrelated meanings, whereas polysemes refer to words with the same written form multiple semantically related senses. This operational distinction follows the theoretical contrast between homonymy and polysemy, and the actual dataset construction relies on the dictionary's entry/sense organization rather than manual semantic-relatedness judgments alone. 
