@@ -65,7 +65,7 @@ Before rerunning the code, replace every `CHANGE_THIS_TO_YOUR_PATH` placeholder 
 | 08 | `data/processed/08_Final_result/` | same Rmd | Assemble the final selected word tables. | `final_all_words_selected.xlsx`. |
 | 09 | `data/final/` | Post-selection example-sentence curation | Build the final complete database by balancing missing or duplicated example sentences across selected words and senses. | `All_HPM_stimuli.csv`. |
 
-## Final Selected Candidate Tables
+## Final Selected Word Candidate Only Tables
 The final selected-word workbook is:
 
 ```text
@@ -81,10 +81,10 @@ It contains:
 
 These candidate sets are not the final AoA rating database itself. They document the initial lexical cleaning, candidate screening, and control-word selection work that supports the later meaning-specific AoA rating study.
 
-**! These candidate sets are not the final complete word-sense-sentence example stimulus database. They document the candidate-word selection stage. For complete final stimuli with curated example sentences and source annotations, use `data/final/All_HPM_stimuli.csv`.**
+**! These candidate sets are not the final complete word-sense-sentence example stimulus database. They finished the candidate-word selection stage. For complete final stimuli with curated example sentences and source annotations, use `data/final/All_HPM_stimuli.csv`.** 
 
 
-## Final Complete Stimuli Database
+## Final Complete Word-Sense-Sentence Stimuli Database
 
 The final complete word-sense-example database is:
 
@@ -94,7 +94,7 @@ data/final/All_HPM_stimuli.csv
 
 If you need the complete information for all final words, senses, and example sentences, please download this file directly. This file is the final stimulus database used after candidate-word selection. It contains the selected homonym, polyseme, and monoseme items together with their corresponding senses, curated example sentences, example-sentence character counts, source indicators, and lexical/psycholinguistic features.
 
-This additional curation step was needed because, after the three word types had been selected, some homonym and polyseme senses still lacked example sentences in **Xiandai Hanyu Cidian, 7th edition**, while some senses had two or more available examples. To reduce imbalance in the number and availability of example sentences across senses, example sentences were selected using the following rule: when Modern Chinese Dictionary provided multiple example sentences, the most appropriate one was selected; when it provided none, an example was extracted from **Comprehensive Dictionary of Modern Chinese** (*Xiandai Hanyu Da Cidian*; Institute of Linguistics, 2006) or **Comprehensive Dictionary of Chinese** (*Hanyu Da Cidian*; Institute of Linguistics, 2008); if these also lacked an example, an example sentence was sourced from two authorized online resources, **Oxford Languages** and **Baidu Education**. To maximize naturalness, example sentences were extracted from authoritative resources rather than authored by the researchers.
+This additional curation step was needed because, after the three word types had been selected, some homonym and polyseme senses still lacked example sentences in **Xiandai Hanyu Cidian, 7th edition**, while some senses had two or more available examples. To reduce imbalance in the number and availability of example sentences across senses, example sentences were selected using the following rule: when Modern Chinese Dictionary provided multiple example sentences, the most appropriate one was selected; when it provided none, an example was extracted from **Comprehensive Dictionary of Modern Chinese** (*Xiandai Hanyu Da Cidian*; Institute of Linguistics, 2006) or **Comprehensive Dictionary of Chinese** (*Hanyu Da Cidian*; Institute of Linguistics, 2008); if these also lacked an example, an example sentence was sourced from two authorized online resources, **Oxford Languages** and **Baidu Education**. To maximize naturalness, example sentences were extracted from authoritative resources rather than manually made by the researchers.
 
 The source of every example sentence is recorded in the database. The source-indicator columns include `XDHYCD`, `XDHYDCD`, `HYDCD`, `Oxford`, `Baidu`, and `Online`. Other key columns include `example`, `character_count`, `homograph`, and `polyseme`.
 
