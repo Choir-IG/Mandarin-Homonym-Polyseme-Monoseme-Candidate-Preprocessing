@@ -34,6 +34,7 @@ data/
   raw_source/
   intermediate/01_notebook_step1_cleaning_results/
   processed/
+  final/All_HPM_stimuli.csv
 ```
 
 ## Raw Source Data
@@ -62,9 +63,9 @@ Before rerunning the code, replace every `CHANGE_THIS_TO_YOUR_PATH` placeholder 
 | 06 | `data/processed/06_The_number_of_Sense_matched/` | same Rmd | Keep the final sense-count matching summary with polyseme and monoseme backup candidates. | `sense_counts_summary_WITH_poly3_mono_backups.xlsx`. |
 | 07 | `data/processed/07_The_final_t-test_comparison_for_homonym_selected_polyseme_and_monoseme_candidate_words/` | same Rmd | Run final Welch and Wilcoxon comparisons for selected homonym, polyseme, and monoseme candidate words. | `final_Welch_candidate_words_ttest.xlsx`, `final_Wilcoxon_candidate_words_ttest.xlsx`. |
 | 08 | `data/processed/08_Final_result/` | same Rmd | Assemble the final selected word tables. | `final_all_words_selected.xlsx`. |
+| 09 | `data/final/` | Post-selection example-sentence curation | Build the final complete database by balancing missing or duplicated example sentences across selected words and senses. | `All_HPM_stimuli.csv`. |
 
 ## Final Selected Candidate Tables
-
 The final selected-word workbook is:
 
 ```text
@@ -80,8 +81,32 @@ It contains:
 
 These candidate sets are not the final AoA rating database itself. They document the initial lexical cleaning, candidate screening, and control-word selection work that supports the later meaning-specific AoA rating study.
 
+**! These candidate sets are not the final complete word-sense-sentence example stimulus database. They document the candidate-word selection stage. For complete final stimuli with curated example sentences and source annotations, use `data/final/All_HPM_stimuli.csv`.**
+
+
+## Final Complete Stimuli Database
+
+The final complete word-sense-example database is:
+
+```text
+data/final/All_HPM_stimuli.csv
+```
+
+If you need the complete information for all final words, senses, and example sentences, please download this file directly. This file is the final stimulus database used after candidate-word selection. It contains the selected homonym, polyseme, and monoseme items together with their corresponding senses, curated example sentences, example-sentence character counts, source indicators, and lexical/psycholinguistic features.
+
+This additional curation step was needed because, after the three word types had been selected, some homonym and polyseme senses still lacked example sentences in **Xiandai Hanyu Cidian, 7th edition**, while some senses had two or more available examples. To reduce imbalance in the number and availability of example sentences across senses, example sentences were selected using the following rule: when Modern Chinese Dictionary provided multiple example sentences, the most appropriate one was selected; when it provided none, an example was extracted from **Comprehensive Dictionary of Modern Chinese** (*Xiandai Hanyu Da Cidian*; Institute of Linguistics, 2006) or **Comprehensive Dictionary of Chinese** (*Hanyu Da Cidian*; Institute of Linguistics, 2008); if these also lacked an example, an example sentence was sourced from two authorized online resources, **Oxford Languages** and **Baidu Education**. To maximize naturalness, example sentences were extracted from authoritative resources rather than authored by the researchers.
+
+The source of every example sentence is recorded in the database. The source-indicator columns include `XDHYCD`, `XDHYDCD`, `HYDCD`, `Oxford`, `Baidu`, and `Online`. Other key columns include `example`, `character_count`, `homograph`, and `polyseme`.
+
 ## Result Notes
 
 - The Step 01 files are produced by the notebook workflow.
 - The original notebook Step 01 saved outputs from the local `test/` folder are stored in `data/intermediate/01_notebook_step1_cleaning_results/`.
 - Steps 02-08 are produced or reconstructed from the R Markdown workflow and its saved outputs.
+- `data/final/All_HPM_stimuli.csv` is the final complete word-sense-example stimulus database after post-selection example-sentence curation.
+
+
+The contributors and contact links for this repository are:
+- Mr. WANG Wenbo: [https://github.com/Choir-IG](https://github.com/Choir-IG)
+- Dr. XIE Chenwei: [https://github.com/PatrickTse512](https://github.com/PatrickTse512)
+- Dr. Matthew King-Hang Ma (https://neurothew.github.io/): (https://github.com/neurothew)
